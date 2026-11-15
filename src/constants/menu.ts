@@ -7,6 +7,8 @@ export const CATEGORIES = [
   { id: 6, name: "Other", icon: "grid-outline" },
 ];
 
+export type TCategoryItem = (typeof CATEGORIES)[number];
+
 export const PROFILE_MENU = [
   { id: 1, title: "My Orders", icon: "receipt-outline", route: "/orders" },
   {
