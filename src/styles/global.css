@@ -2,6 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  @apply flex-1 items-center justify-center bg-blue-400;
+@layer components {
+  /* Layout */
+  .app-container {
+    @apply flex-1 items-center justify-center bg-blue-400;
+  }
+
+  .app-screen {
+    @apply flex-1 bg-white px-4 py-6;
+  }
+
+  .app-centered {
+    @apply items-center justify-center;
+  }
+
+  .app-row {
+    @apply flex-row items-center;
+  }
+
+  .app-row-between {
+    @apply flex-row items-center justify-between;
+  }
+
+  .app-row-centered {
+    @apply flex-row items-center justify-center;
+  }
+
+  /* Cards */
+  .app-card {
+    @apply rounded-xl bg-white p-4;
+  }
+
+  .app-card-bordered {
+    @apply rounded-xl border border-gray-200 bg-white p-4;
+  }
+
+  /* Typography */
+  .app-title {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .app-subtitle {
+    @apply text-lg font-semibold text-gray-800;
+  }
+
+  .app-body {
+    @apply text-base text-gray-700;
+  }
+
+  .app-muted {
+    @apply text-sm text-gray-500;
+  }
+
+  /* Buttons */
+  .app-button {
+    @apply items-center justify-center rounded-lg bg-blue-600 px-4 py-3;
+  }
+
+  .app-button-text {
+    @apply text-base font-semibold text-white;
+  }
+
+  .app-button-secondary {
+    @apply items-center justify-center rounded-lg bg-gray-200 px-4 py-3;
+  }
+
+  .app-button-secondary-text {
+    @apply text-base font-semibold text-gray-800;
+  }
+
+  /* Form */
+  .app-input {
+    @apply rounded-lg border border-gray-300 bg-white px-3 py-3 text-base text-gray-900;
+  }
 }
