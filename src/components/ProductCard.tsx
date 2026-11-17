@@ -6,6 +6,8 @@ import { Ionicons } from "@expo/vector-icons";
 
 import { COLORS } from "@/constants/colors";
 
+import { useWhishList } from "@/context/WhishListContext";
+
 import { TProduct } from "@/types/Product.type";
 
 type Props = {
@@ -13,7 +15,9 @@ type Props = {
 };
 
 const ProductCard = ({ product }: Props) => {
-  const isLiked = true;
+  const { isInWishlist, toggleWishlist } = useWhishList();
+
+  const isLiked = isInWishlist(product._id);
 
   const { isFeatured } = product;
 
@@ -31,6 +35,7 @@ const ProductCard = ({ product }: Props) => {
             style={{ elevation: 2, shadowColor: "red" }}
             onPress={(e) => {
               e.stopPropagation();
+              toggleWishlist(product);
             }}
           >
             <Ionicons
